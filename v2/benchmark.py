@@ -110,6 +110,7 @@ xacc = 0
 for d in todo:
     src = PAD_SEQ + pipeline.encode(d[0])
     dst = pipeline.encode(d[1])
+    time_start=time.time()
 
     logits = 0
     correct = True
@@ -124,4 +125,5 @@ for d in todo:
     xsum += logits
     xacc += 1 if correct else 0
     if xcnt % 100 == 0 or xcnt == len(todo):
-        print(xcnt, 'ppl', round(math.exp(-xsum / xcnt), 2), 'acc', round(xacc/xcnt*100, 2))
+        end_time=time.time()
+        print(xcnt, 'ppl', round(math.exp(-xsum / xcnt), 2), 'acc', round(xacc/xcnt*100, 2), 'average_time' , (end_time-start_time)*100)
