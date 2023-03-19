@@ -48,6 +48,7 @@ print(out.detach().cpu().numpy())                   # same result as above
 Cool Community RWKV Projects:
 
 https://pypi.org/project/rwkvstic/ pip package (with 8bit & offload for low VRAM GPUs)
+**https://colab.research.google.com/github/harrisonvanderbyl/rwkvstic/blob/master/notebooks/chatbot.ipynb#scrollTo=v6gzfDru7phX** A colab based on rwkvstic project which may run the 7B model 2023-03 in a T4 instance for inference only.
 
 https://github.com/gururise/rwkv_gradio RWKV Gradio
 
